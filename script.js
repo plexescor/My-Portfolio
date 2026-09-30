@@ -112,15 +112,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // tantrums stats
   (async () => {
     const starsEl = document.getElementById("tnt-stars");
+    const dlEl = document.getElementById("tnt-downloads");
     try {
-      const data = await fetchRepo("tantrums");
+      const [data, downloads] = await Promise.all([
+        fetchRepo("tantrums"),
+        fetchDownloads("tantrums"),
+      ]);
       starsEl.textContent = fmt(data.stargazers_count);
+      dlEl.textContent = fmt(downloads);
     } catch {
       try {
         const cache = await fetchCache();
         starsEl.textContent = fmt(cache.tantrums.stars);
+        dlEl.textContent = fmt(cache.tantrums.downloads);
       } catch {
         starsEl.textContent = "—";
+        dlEl.textContent = "—";
       }
     }
   })();

@@ -458,6 +458,10 @@ nav .container {
 }
 
 /* ===== CONTACT ===== */
+#contact {
+  padding-bottom: 80px;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

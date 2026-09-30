@@ -30,21 +30,22 @@ async function getDownloads(repo) {
 async function main() {
   console.log("Fetching GitHub stats...");
 
-  const [hprStars, hprDownloads, tntStars] = await Promise.all([
+  const [hprStars, hprDownloads, tntStars, tntDownloads] = await Promise.all([
     getStars("HPR"),
     getDownloads("HPR"),
     getStars("tantrums"),
+    getDownloads("tantrums"),
   ]);
 
   const cache = {
     HPR: { stars: hprStars, downloads: hprDownloads },
-    tantrums: { stars: tntStars },
+    tantrums: { stars: tntStars, downloads: tntDownloads },
   };
 
   writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
   console.log("cache.json updated:");
   console.log(`  HPR       → ${hprStars} stars, ${hprDownloads} downloads`);
-  console.log(`  tantrums  → ${tntStars} stars`);
+  console.log(`  tantrums  → ${tntStars} stars, ${tntDownloads} downloads`);
 }
 
 main().catch((e) => {
