@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plexescor / Abhijot Singh</title>
+  <meta name="description" content="Plexescor (Abhijot Singh). C++23 systems programmer. Building HPR and the Tantrums programming language.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <span class="nav-brand">plexescor</span>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#stack">stack</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero container">
+    <img src="assets/sonic.png" alt="Plexescor" class="hero-avatar">
+    <div class="hero-text">
+      <h1>Plexescor</h1>
+      <p class="hero-realname">Abhijot Singh</p>
+      <p class="hero-tagline">I write C++23 and build things from scratch. Activity trackers, compilers, desktop applications. I care about understanding how systems actually work, not just using them.</p>
+    </div>
+  </header>
+
+  <div class="divider-wrap"><div class="divider"></div></div>
+
+  <!-- ABOUT -->
+  <section id="about" class="container fade-in">
+    <h2 class="section-title">About</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm 16, in 11th grade, based in India. I started with a low-end laptop (i5-4210U, 840M) and learned to care about every watt and every cycle because I had no choice. That stuck.</p>
+        <p>I built HPR because every activity tracker I found either needed an account, sent data to some server, or just didn't work on Linux. So I wrote my own. It runs on Windows and Linux, tracks everything locally, and has its own extension system.</p>
+        <p>Then I tried writing a programming language. First attempt was fully AI-generated. It compiled, sort of, but I couldn't debug it or extend it because I didn't understand what it was doing. So I deleted everything and rewrote it from scratch. Every line in tantrums is mine.</p>
+        <p>I like optimization, TDP tweaking, understanding OS internals, and building software that doesn't rely on 47 npm packages to print hello world.</p>
+      </div>
+      <aside class="about-sidebar">
+        <div class="about-fact">
+          <span class="about-fact-icon">📍</span>
+          <span>India</span>
+        </div>
+        <div class="about-fact">
+          <span class="about-fact-icon">🎓</span>
+          <span>11th Grade, 16 years old</span>
+        </div>
+        <div class="about-fact">
+          <span class="about-fact-icon">💻</span>
+          <span>C++23 / Systems</span>
+        </div>
+        <div class="about-fact">
+          <span class="about-fact-icon">🐧</span>
+          <span>Arch Linux (btw)</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="divider-wrap"><div class="divider"></div></div>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container fade-in">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-list">
+
+      <!-- HPR -->
+      <article class="project-card" data-href="https://github.com/plexescor/HPR">
+        <div class="project-header">
+          <img src="assets/hpr-logo.png" alt="HPR Logo" class="project-logo">
+          <div class="project-header-text">
+            <h3>HPR <span class="project-title-sep">/</span> Human Pattern Recorder</h3>
+            <p class="project-subtitle">Compiled, offline, zero-account activity tracker</p>
+          </div>
+        </div>
+        <div class="project-stats-strip">
+          <div class="stat-chip"><span class="stat-val" id="hpr-stars">...</span><span class="stat-lbl">stars</span></div>
+          <div class="stat-chip"><span class="stat-val" id="hpr-downloads">...</span><span class="stat-lbl">downloads</span></div>
+          <div class="stat-chip"><span class="stat-val" id="hpr-age">...</span><span class="stat-lbl">old</span></div>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Watches your active window, logs usage history, and builds insights. All locally. No accounts, no telemetry by default, no server. Runs from the system tray on Windows and Linux. Data stored in plain SQLite files you can open with any viewer.</p>
+
+          <ul class="project-features">
+            <li>Cross-platform: Windows 10/11 + Linux (Hyprland, GNOME, KDE, Cinnamon, niri)</li>
+            <li>Lua 5.4 extension engine with hot-reload and EventHub</li>
+            <li>Custom theme system, full Slint UI replacement at runtime</li>
+            <li>Browser tab tracking via companion extension</li>
+            <li>App usage limits and daily goals with notifications</li>
+            <li>Advanced pattern analysis and day construction timeline</li>
+            <li>SQLite3 storage, one file per day, 30-100KB each</li>
+            <li>System tray with native D-Bus (Linux) and Win32 (Windows)</li>
+          </ul>
+
+          <div class="project-tags">
+            <span class="tag">C++23</span>
+            <span class="tag">Slint 1.18.1</span>
+            <span class="tag">SQLite3</span>
+            <span class="tag">Lua 5.4</span>
+            <span class="tag">sol2</span>
+            <span class="tag">CMake</span>
+            <span class="tag">libdbus-1</span>
+            <span class="tag">WinHTTP</span>
+          </div>
+
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/plexescor/HPR" target="_blank" rel="noopener">GitHub</a>
+            <a class="project-link" href="https://hpr-cpp.netlify.app" target="_blank" rel="noopener">Documentation</a>
+            <a class="project-link" href="https://discord.gg/G534HmrW75" target="_blank" rel="noopener">Discord Server</a>
+            <a class="project-link" href="https://ko-fi.com/plexescor" target="_blank" rel="noopener">Ko-fi</a>
+          </div>
+        </div>
+
+        <div class="project-screenshot">
+          <img src="assets/hpr-main.png" alt="HPR Dashboard">
+        </div>
+      </article>
+
+      <!-- tantrums -->
+      <article class="project-card" data-href="https://github.com/plexescor/tantrums">
+        <div class="project-header">
+          <div class="project-header-text">
+            <h3>tantrums</h3>
+            <p class="project-subtitle">Compiled programming language with an LLVM backend</p>
+          </div>
+        </div>
+        <div class="project-stats-strip">
+          <div class="stat-chip"><span class="stat-val" id="tnt-stars">...</span><span class="stat-lbl">stars</span></div>
+          <div class="stat-chip"><span class="stat-val" id="tnt-age">...</span><span class="stat-lbl">old</span></div>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Statically typed, compiles to native executables through LLVM IR. Every component (lexer, parser, type checker, code generator) written by hand in C++23. The previous version was AI-generated. I scrapped it and rebuilt from zero because I didn't learn anything from it.</p>
+
+          <ul class="project-features">
+            <li>Recursive descent parser with precedence climbing</li>
+            <li>LLVM IR codegen, native types, no NaN-boxing</li>
+            <li>Function declarations, calls, arguments, and returns</li>
+            <li>Variable declaration, reassignment, and arithmetic expressions</li>
+            <li>Object emission and native linking (link.exe / ld.lld)</li>
+            <li>Type checker with scoped symbol table and bounds validation</li>
+          </ul>
+
+          <div class="project-tags">
+            <span class="tag">C++23</span>
+            <span class="tag">LLVM</span>
+            <span class="tag">CMake</span>
+          </div>
+
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/plexescor/tantrums" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Code sample -->
+        <div class="project-code">
+          <div class="code-header">playground.tnt</div>
+          <div class="code-body"><span class="kw">int64</span> <span class="fn">testFunc</span>()
+{
+    <span class="kw">int64</span> result = <span class="num">9</span> + <span class="num">18</span>;
+    <span class="kw">return</span> result;
+}
+
+<span class="kw">void</span> <span class="fn">greet</span>()
+{
+    <span class="fn">print</span>(<span class="str">"Hello World!\n"</span>);
+}
+
+<span class="kw">int32</span> <span class="fn">main</span>()
+{
+    <span class="kw">int32</span> x = -<span class="num">5</span> * <span class="num">1</span>;
+    <span class="kw">int64</span> y = <span class="num">5</span> / <span class="num">48</span> + (<span class="num">47488</span> + <span class="num">38</span> * <span class="num">37</span>);
+    <span class="fn">greet</span>();
+    <span class="fn">print</span>(<span class="fn">testFunc</span>() + y);
+    <span class="kw">return</span> <span class="num">0</span>;
+}</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="divider-wrap"><div class="divider"></div></div>
+
+  <!-- TECH STACK -->
+  <section id="stack" class="container fade-in">
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="stack-grid">
+      <span class="stack-item">C++23</span>
+      <span class="stack-item">CMake</span>
+      <span class="stack-item">LLVM</span>
+      <span class="stack-item">Slint</span>
+      <span class="stack-item">SQLite3</span>
+      <span class="stack-item">Lua 5.4</span>
+      <span class="stack-item">Linux</span>
+      <span class="stack-item">Git</span>
+    </div>
+  </section>
+
+  <div class="divider-wrap"><div class="divider"></div></div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container fade-in">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <a class="contact-card" href="https://github.com/plexescor" target="_blank" rel="noopener">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">plexescor</span>
+      </a>
+      <a class="contact-card" href="https://x.com/plexescor" target="_blank" rel="noopener">
+        <span class="contact-label">X</span>
+        <span class="contact-value">@plexescor</span>
+      </a>
+
+      <a class="contact-card" href="https://discordapp.com/users/plexescor" target="_blank" rel="noopener">
+        <span class="contact-label">Discord</span>
+        <span class="contact-value">@plexescor</span>
+      </a>
+      <a class="contact-card" href="https://ko-fi.com/plexescor" target="_blank" rel="noopener">
+        <span class="contact-label">Ko-fi</span>
+        <span class="contact-value">plexescor</span>
+      </a>
+      <a class="contact-card" href="mailto:saraswal2010@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">saraswal2010@gmail.com</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Plexescor (Abhijot Singh)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
